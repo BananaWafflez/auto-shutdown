@@ -28,12 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            label1 = new Label();
+            button1 = new Button();
+            numericUpDown1 = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(407, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(143, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Welcome to the program!";
+            label1.Click += label1_Click;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(348, 59);
+            button1.Name = "button1";
+            button1.Size = new Size(282, 90);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(567, 332);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(74, 23);
+            numericUpDown1.TabIndex = 2;
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(990, 605);
+            Controls.Add(numericUpDown1);
+            Controls.Add(button1);
+            Controls.Add(label1);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private Button button1;
+        private NumericUpDown numericUpDown1;
     }
 }
